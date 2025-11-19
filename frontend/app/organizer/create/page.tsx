@@ -86,10 +86,10 @@ export default function CreateEventPage() {
             <h3 className="text-3xl font-bold font-mono tracking-wider">DEPLOYMENT_SUCCESS</h3>
             <p className="text-white/70 font-mono">EXHIBIT_ID: #{eventId}</p>
             <div className="flex gap-4 justify-center">
-              <Link href={`/event/${eventId}`} className="btn-gradient font-mono text-sm tracking-wider">
+              <Link href={`/event?id=${eventId}`} className="btn-gradient font-mono text-sm tracking-wider">
                 VIEW_DETAILS
               </Link>
-              <Link href={`/organizer/qr/${eventId}`} className="btn-primary font-mono text-sm tracking-wider">
+              <Link href={`/organizer/qr?id=${eventId}`} className="btn-primary font-mono text-sm tracking-wider">
                 GENERATE_QR
               </Link>
             </div>

@@ -69,7 +69,8 @@ export function useEventManager(parameters: {
       const sig = await FhevmDecryptionSignature.loadOrSign(instance, [em.address], ethersSigner, storage.current);
       if (!sig) { setMessage("Unable to generate decryption signature"); return false; }
       const res = await instance.userDecrypt([{ handle: countHandle, contractAddress: em.address }], sig.privateKey, sig.publicKey, sig.signature, sig.contractAddresses, sig.userAddress, sig.startTimestamp, sig.durationDays);
-      setClearCount(res[countHandle]);
+      const value = (res as Record<string, unknown>)[countHandle];
+      setClearCount(typeof value === "bigint" ? value : undefined);
       setMessage("Decrypted");
       return true;
     } catch {

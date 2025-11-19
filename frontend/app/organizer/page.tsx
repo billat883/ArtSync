@@ -54,13 +54,13 @@ export default function OrganizerPage() {
               
               <div className="grid grid-cols-2 gap-3">
                 <Link 
-                  href={id ? `/event/${id}` : "#"} 
+                  href={id ? `/event?id=${id}` : "#"} 
                   className={`btn-gradient text-center text-xs font-mono tracking-wider ${!id && 'opacity-30 pointer-events-none'}`}
                 >
                   DETAILS
                 </Link>
                 <Link 
-                  href={id ? `/organizer/qr/${id}` : "#"} 
+                href={id ? `/organizer/qr?id=${id}` : "#"}
                   className={`btn-primary text-center text-xs font-mono tracking-wider ${!id && 'opacity-30 pointer-events-none'}`}
                 >
                   QR_CODE
