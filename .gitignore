@@ -25,5 +25,5 @@ dist/
 build/
 coverage/
 
-# Sensitive addresses
-frontend/src/abi/ArtExpoAddresses.ts
+# Static export output (local)
+frontend/out/
