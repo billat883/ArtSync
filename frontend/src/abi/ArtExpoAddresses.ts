@@ -1,4 +1,3 @@
-export const ArtExpoAddresses = {} as const;
 export const ArtExpoAddresses = {
   "11155111": {
     "chainId": 11155111,
