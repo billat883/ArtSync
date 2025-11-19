@@ -1,0 +1,29 @@
+# Node
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.*
+.DS_Store
+
+# Hardhat
+contracts/artifacts/
+contracts/cache/
+contracts/deployments/
+contracts/build-info/
+
+# Next.js
+frontend/.next/
+frontend/.turbo/
+frontend/.vercel/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Sensitive addresses
+frontend/src/abi/ArtExpoAddresses.ts
